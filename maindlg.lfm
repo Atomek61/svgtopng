@@ -1,0 +1,133 @@
+object MainDialog: TMainDialog
+  Left = 395
+  Height = 379
+  Top = 325
+  Width = 518
+  AllowDropFiles = True
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSizeToolWin
+  Caption = 'Convert SVG to PNG'
+  ClientHeight = 379
+  ClientWidth = 518
+  Constraints.MinHeight = 200
+  Constraints.MinWidth = 400
+  OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
+  SessionProperties = 'EditSizes.Text;Top;Width;Left;Height'
+  LCLVersion = '3.0.0.3'
+  object EditSizes: TEdit
+    Left = 112
+    Height = 23
+    Top = 18
+    Width = 128
+    TabOrder = 2
+    Text = '20, 32'
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 22
+    Width = 63
+    Caption = 'List of Sizes:'
+    ParentColor = False
+  end
+  object Shape1: TShape
+    Left = 8
+    Height = 291
+    Top = 78
+    Width = 503
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Brush.Style = bsClear
+    Pen.Color = clGray
+    Pen.Style = psDash
+    Pen.Width = 3
+    Shape = stRoundRect
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 54
+    Width = 162
+    Caption = '.svg-Files: (drag from Explorer)'
+    ParentColor = False
+  end
+  object Log: TMemo
+    Left = 32
+    Height = 258
+    Top = 94
+    Width = 456
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderStyle = bsNone
+    Color = clBtnFace
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 3
+  end
+  object ButtonOpen: TBitBtn
+    Left = 416
+    Height = 61
+    Top = 8
+    Width = 80
+    Anchors = [akTop, akRight]
+    Caption = '&Load...'
+    Layout = blGlyphTop
+    Images = ImageList1
+    ImageIndex = 0
+    OnClick = ButtonOpenClick
+    TabOrder = 0
+  end
+  object ButtonRepeat: TBitBtn
+    Left = 320
+    Height = 61
+    Top = 8
+    Width = 80
+    Anchors = [akTop, akRight]
+    Caption = '&Repeat'
+    Enabled = False
+    Layout = blGlyphTop
+    Images = ImageList1
+    ImageIndex = 1
+    OnClick = ButtonRepeatClick
+    TabOrder = 1
+  end
+  object OpenDialog: TOpenDialog
+    Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
+    Left = 48
+    Top = 142
+  end
+  object ApplicationProperties1: TApplicationProperties
+    Left = 232
+    Top = 112
+  end
+  object IniPropStorage: TIniPropStorage
+    StoredValues = <    
+      item
+      end>
+    IniFileName = 'svgtopng.settings.ini'
+    IniSection = 'Settings'
+    Left = 249
+    Top = 48
+  end
+  object ImageList1: TImageList
+    Height = 20
+    Width = 20
+    Left = 152
+    Top = 136
+    Bitmap = {
+      4C7A020000001400000014000000A50100000000000078DAED943F48027114C7
+      4F100707234449104248B05168B7ADD1B1C1201072ACA9B16E7090E0A041C8A0
+      8396868808120982426B32CCB136230B82965B02FF4CD7F707EFE0F8F1EB8EBB
+      9FB5D883CF72BFF7FBDE7BEFF7DE5394E9B4CDEBCF0CC8D99893D05A010360DA
+      7801F33EB44C4996FF4A6FEDE2CDCC1D3D796261EFE17876E74E25B6EC7A19AD
+      63E29B0CAAA5B57AF62AAB6580194B6F517B948ECDAADFA462B3F426151B33D9
+      D8A2BBF75F566CCC64DF94F58BF26F536D271B4B41900707A0053AA00EB641D2
+      834E00AC833E307F6004F641D8452B016E1D74789E41CA41AF22B833064DA083
+      736070E71F204D79150535BB21BF21D0408CF38980434EB3074E41571063145C
+      81AC4B6DAA825C1A12EF1FA2FAD9F57409BD0218707A659F5A71A0821AB8046D
+      F00E4A369F127D6B934F8DEEC47DFEB3CCC5CE722948D44317F46A4842AF2178
+      FFAACB9D2CF5565470D6A59EEC719AAC77239C6F8C7A7D483E6C06829C4F9166
+      264D3364D73468D6749ABDB120978A431E2941AF3AC17648C2A53661DA492307
+      9D3EEDB68087774AD20EADD34E6DD18ECDF335FB2DFB06BF2655DB
+    }
+  end
+end

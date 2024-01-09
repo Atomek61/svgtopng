@@ -1,0 +1,5 @@
+# .gitignore for Lazarus
+backup/
+lib/
+*.lps
+*.dbg

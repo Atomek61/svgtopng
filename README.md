@@ -8,6 +8,9 @@ This tool lets me just drag some .svg-images from the Windows explorer onto the 
 
 I recommend to copy the .exe to the Lazarus-Folder and to create tools entry in the IDE.
 
+#Dependencies
+The source depends on BGRABitmap as a part of Lazarus. This library renders the SVG image.
+
 # Copyright
 
 (c) 2024 Jan-Erich Schirrmacher, jan@atomek.de
